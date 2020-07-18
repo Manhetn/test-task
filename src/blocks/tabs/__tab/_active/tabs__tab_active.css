@@ -1,0 +1,4 @@
+.tabs__tab.tabs__tab_active {
+  border-bottom: 3px solid #F1F1F1;
+  cursor: default;
+}

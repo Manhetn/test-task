@@ -1,0 +1,14 @@
+.user-info__data-container {
+  width: auto;
+  padding: 31px 45px 0px 45px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .user-info__data-container {
+    padding-top: calc((100vw - 320px)/(767 - 320) * (31 - 0) + 0px);
+    padding-right: calc((100vw - 320px)/(767 - 320) * (45 - 0) + 0px);
+    padding-left: calc((100vw - 320px)/(767 - 320) * (45 - 0) + 0px);
+    margin-left: calc((100vw - 320px)/(767 - 320) * (0 - 25) + 25px);
+  }
+}

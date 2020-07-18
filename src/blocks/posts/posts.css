@@ -1,0 +1,35 @@
+@import url(./_hidden/posts_hidden.css);
+
+.posts {
+  height: 70vh;
+  margin-left: 45px;
+  margin-right: 28px;
+  padding-bottom: 34px;
+  padding-right: 47px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-height: 1080px) {
+  .posts {
+    height: 55vh;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .posts {
+    height: 47vh;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .posts {
+    padding-right: calc((100vw - 320px)/(767 - 320) * (47 - 17) + 17px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .posts {
+    padding-right: calc((100vw - 320px)/(767 - 320) * (27 - 17) + 17px);
+  }
+}

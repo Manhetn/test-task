@@ -1,0 +1,20 @@
+.friend__avatar {
+  width: 125px;
+  height: 125px;
+}
+
+@media screen and (max-width: 1439px) {
+  .friend__avatar {
+    width: calc( (100vw - 768px)/(1439 - 768) * (125 - 100) + 100px);
+    height: calc( (100vw - 768px)/(1439 - 768) * (125 - 100) + 100px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .friend__avatar {
+    /* width: 100px; */
+    width: calc((100vw - 320px)/(767 - 320) * (100 - 70) + 70px);
+    /* height: 100px; */
+    height: calc((100vw - 320px)/(767 - 320) * (100 - 70) + 70px);
+  }
+}

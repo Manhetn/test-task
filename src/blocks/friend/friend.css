@@ -1,0 +1,27 @@
+@import url(./__avatar/friend__avatar.css);
+@import url(./__info/friend__info.css);
+@import url(./__info-iteam/friend__info-iteam.css);
+@import url(./__contact-info/friend__contact-info.css);
+
+.friend {
+  width: 722px;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: start;
+
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #000000;
+}
+
+@media screen and (max-width: 1439px) {
+  .friend {
+    width: calc( (100vw - 768px)/(1439 - 768) * (722 - 432) + 432px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .friend {
+    width: calc((100vw - 320px)/(767 - 320) * (467 - 270) + 270px);
+  }
+}

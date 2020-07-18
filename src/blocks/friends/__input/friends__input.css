@@ -1,0 +1,26 @@
+.friends__input {
+  width: 222px;
+  height: 26px;
+  margin-right: 45px;
+  padding-right: 14px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  border: 1px solid #E5E5E5;
+}
+
+.friends__input::placeholder {
+  color: #C4C4C4;
+  text-align: end;
+}
+
+@media screen and (max-width: 1439px) {
+  .friends__input {
+    margin-right: calc( (100vw - 768px)/(1439 - 768) * (45 - 20) + 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .friends__input {
+    margin-right: 20px;
+  }
+}

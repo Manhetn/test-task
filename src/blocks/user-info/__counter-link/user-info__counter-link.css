@@ -1,0 +1,6 @@
+@import url(./_zero/user-info__counter-link_zero.css);
+
+.user-info__counter-link {
+  text-decoration: none;
+  color: black;
+}

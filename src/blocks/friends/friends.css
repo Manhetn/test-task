@@ -1,0 +1,14 @@
+@import url(./__form/friends__form.css);
+@import url(./__input/friends__input.css);
+@import url(./__page-numbers/friends__page-numbers.css);
+@import url(./__page-number/friends__page-number.css);
+@import url(./_hidden/friends_hidden.css);
+
+.friends {
+  padding-top: 14px;
+
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+

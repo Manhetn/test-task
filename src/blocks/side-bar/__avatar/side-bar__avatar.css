@@ -1,0 +1,23 @@
+.side-bar__avatar {
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1439px) {
+  .side-bar__avatar {
+    width: calc( (100vw - 768px)/(1439 - 768) * (300 - 170) + 170px);
+    height: calc( (100vw - 768px)/(1439 - 768) * (300 - 170) + 170px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .side-bar__avatar {
+    width: calc( (100vw - 320px)/(767 - 320) * (200 - 85) + 85px);
+    height: calc( (100vw - 320px)/(767 - 320) * (200 - 85) + 85px);
+
+    margin-top: calc( (100vw - 320px)/(767 - 320) * (30 - 25) + 25px);
+    margin-bottom: calc((100vw - 320px)/(767 - 320) * (30 - 25) + 25px);
+    margin-left: calc((100vw - 320px)/(767 - 320) * (30 - 25) + 25px);
+  }
+}
