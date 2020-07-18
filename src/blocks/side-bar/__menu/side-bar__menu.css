@@ -1,4 +1,4 @@
-@import url(./_hidden/side-bar__menu_hidden.css);
+@import url(./_visible/side-bar__menu_visible.css);
 
 .side-bar__menu {
   /* margin: 0px; */
@@ -7,7 +7,7 @@
   padding-bottom: 14px;
 }
 
-@import url(./_visible/side-bar__menu_visible.css);
+
 
 @media screen and (max-width: 1439px) {
   .side-bar__menu {
