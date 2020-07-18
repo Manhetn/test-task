@@ -20,4 +20,19 @@ export default class User extends BaseComponent {
       })
   }
 
+
+
+    // mainApi
+    //   .getUser()
+    //   .then(res => {
+    //     if (res.statusCode === '200') {
+    //       storage.setPropertyValue('userName', res.data.name);
+    //       header._showAuthorizedUserMenu(res.data.name)
+    //     } else {
+    //       throw new Error(res.message);
+    //     }
+    //   }).catch(err => console.log(err))
+
+
+
 }
