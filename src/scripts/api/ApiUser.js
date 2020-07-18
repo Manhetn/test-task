@@ -8,7 +8,7 @@ export default class ApiUser extends Api {
   getUser() {
     return fetch(`${this.url}${this.roots.getUser}`, {
       method: 'GET',
-      credentials: 'include',
+      // credentials: 'include',
       headers: this.headers,
     })
     .then(res => res.json());
