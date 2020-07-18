@@ -1,0 +1,7 @@
+.tabs__container {
+  margin: 0px;
+  padding-left: 15px;
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+}

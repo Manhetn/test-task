@@ -1,0 +1,21 @@
+@import url(./_hidden/friends__page-numbers_hidden.css);
+
+.friends__page-numbers {
+  margin: 0px;
+  padding: 0px 0px 22px 0px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1439px) {
+  .friends__page-numbers {
+    margin-top: calc( (100vw - 768px)/(1439 - 768) * (22 - 25) + 25px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .friends__page-numbers {
+    margin-top: 25px;
+  }
+}

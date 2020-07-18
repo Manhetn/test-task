@@ -1,0 +1,5 @@
+.user-info__counter-link.user-info__counter-link_zero {
+  color: #C4C4C4;
+  cursor: default;
+  pointer-events: none;
+}

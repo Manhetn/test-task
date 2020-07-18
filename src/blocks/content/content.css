@@ -1,0 +1,19 @@
+.content {
+  width: 810px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1439px) {
+  .content {
+    width: calc( (100vw - 768px)/(1439 - 768) * (810 - 462) + 462px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    width: 100%;
+    box-shadow: none;
+
+  }
+}

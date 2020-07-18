@@ -1,0 +1,32 @@
+@import url(./__data-container/user-info__data-container.css);
+@import url(./__data-iteam/user-info__data-iteam.css);
+@import url(./__contact-info/user-info__contact-info.css);
+@import url(./__counter-container/user-info__counter-container.css);
+@import url(./__counter-iteam/user-info__counter-iteam.css);
+@import url(./__counter-link/user-info__counter-link.css);
+@import url(./__counter/user-info__counter.css);
+@import url(./__counter-text/user-info__counter-text.css);
+
+.user-info {
+  width: 810px;
+
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+  justify-self: start;
+
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #000000;
+}
+
+@media screen and (max-width: 1439px) {
+  .user-info {
+    width: calc( (100vw - 768px)/(1439 - 768) * (810 - 462) + 462px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .user-info {
+    width: 100%;
+    box-shadow: none;
+  }
+}
