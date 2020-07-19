@@ -6,7 +6,17 @@ export default class Pagination extends BaseComponent {
   }
 
   _createPageNubmber(number) {
-    return `<li class="friends__page-number friends__page-number-${number}">${number}</li>`;
+    return `<li class="friends__number-iteam">
+              <button
+                class="friends__button button friends__page-number friends__page-number-${number}"
+                type="button"
+                name="page-${number}"
+              >
+                ${number}
+              </button>
+            </li>`
+
+    // `<li class="friends__page-number friends__page-number-${number}">${number}</li>`;
   }
 
   addPageNumber(number) {
@@ -14,8 +24,13 @@ export default class Pagination extends BaseComponent {
   }
 
   setListeners() {
-    console.log(this.block);
     this._setHandlers([
+      { element: this.block, event: 'click', handler: this._openAnotherPage.bind(this) },
+    ]);
+  }
+
+  removeListeners() {
+    this._removeHandlers([
       { element: this.block, event: 'click', handler: this._openAnotherPage.bind(this) },
     ]);
   }
@@ -23,26 +38,24 @@ export default class Pagination extends BaseComponent {
   _openAnotherPage(event) {
     if (event.target.classList.contains(this.elements.pageNumber)){
       const { friends } = this._dependencies;
-      const openingPageNumber = event.target.textContent;
-      const closingPageNumber = event.target.parentElement.querySelector(this.elements.numberActive);
+      const openingPageNumber = event.target;
+      const closingPageNumber = event.currentTarget.querySelector(this.elements.numberActive);
 
-      friends.visiblePage(openingPageNumber);
-      friends.hiddenPage(closingPageNumber.textContent);
+      friends.visiblePage(openingPageNumber.name);
+      friends.hiddenPage(closingPageNumber.name);
       this.activatePageNumber(openingPageNumber);
-      this.deactivatePageNumber(closingPageNumber.textContent);
+      this.deactivatePageNumber(closingPageNumber);
     }
   }
 
   activatePageNumber(numberPage) {
-    const number = document.querySelector(`.friends__page-number-${numberPage}`);
-
-    number.classList.add(this.modifiers.numberActive);
+    numberPage.setAttribute('disabled', 'disabled');
+    numberPage.classList.add(this.modifiers.numberActive);
   }
 
   deactivatePageNumber(numberPage) {
-    const number = document.querySelector(`.friends__page-number-${numberPage}`);
-
-    number.classList.remove(this.modifiers.numberActive);
+    numberPage.removeAttribute('disabled', 'disabled');
+    numberPage.classList.remove(this.modifiers.numberActive);
   }
 
   clearPagination() {
@@ -50,8 +63,9 @@ export default class Pagination extends BaseComponent {
   }
 
   activatFirstPageNumber() {
-    const firsPageNumber = this.block.firstElementChild;
+    const firsPageNumber = this.block.firstElementChild.firstElementChild;
 
+    firsPageNumber.setAttribute('disabled', 'disabled');
     firsPageNumber.classList.add(this.modifiers.numberActive);
   }
 

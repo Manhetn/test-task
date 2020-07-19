@@ -1,0 +1,10 @@
+.friends__button {
+  width: auto;
+  height: auto;
+  padding: 0px;
+  padding-right: 1px;
+}
+
+.friends__button:disabled {
+  color: #FF0000;
+}

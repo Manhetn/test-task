@@ -92,14 +92,15 @@ export default class Friends extends BaseComponent {
   }
 
   visiblePage(numberPage) {
-    const page = document.querySelector(`.friends__page-${numberPage}`);
-
+    // console.log(numberPage)
+    const page = document.querySelector(`.friends__${numberPage}`);
+    // console.log(page)
     page.classList.remove(this.modifiers.pageHidden);
   }
 
   hiddenPage(numberPage) {
     // console.log(numberPage)
-    const page = document.querySelector(`.friends__page-${numberPage}`);
+    const page = document.querySelector(`.friends__${numberPage}`);
 
     page.classList.add(this.modifiers.pageHidden);
   }
