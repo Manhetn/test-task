@@ -1,0 +1,6 @@
+@import url(./_hidden/friends__page_hidden.css);
+
+.friends__page {
+  display: block;
+  background-color: chartreuse;
+}

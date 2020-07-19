@@ -12,7 +12,7 @@ export default class ApiUser extends Api {
       headers: this.headers,
     })
     .then(res => this._checkRes(res))
-
+    .catch(this._showError);
   }
 
 }

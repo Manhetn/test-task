@@ -11,7 +11,10 @@ export default class Avatar extends BaseComponent {
 
   _setListeners() {
     this._setHandlers([
-      { element: this.elements.inputEditAvatar, event: 'change', handler: this._changeAvatar.bind(this) },
+      { element: this.elements.inputEditAvatar,
+        event: 'change',
+        handler: this._changeAvatar.bind(this)
+      },
     ]);
   }
 

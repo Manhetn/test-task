@@ -4,6 +4,8 @@
 @import url(./__page-number/friends__page-number.css);
 @import url(./_hidden/friends_hidden.css);
 
+@import url(./__page/friends__page.css);
+
 .friends {
   padding-top: 14px;
 

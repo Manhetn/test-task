@@ -15,18 +15,23 @@ export default class Filter extends BaseComponent {
   removeListeners() {
 
     this._removeHandlers([
-      { element: this.block, event: 'input', handler: this._filter.bind(this) },
+      { element: this.block,
+        event: 'input',
+        handler: this._filter.bind(this)
+      },
     ]);
   }
 
   _filter() {
-    const { storage, friends } = this._dependencies;
+    const { storage, friends, pagination } = this._dependencies;
     const friendsArray = JSON.parse(storage.getPropertyValue('friends'));
     const filteredFriends = friendsArray.filter(friend => {
        return  friend.email.includes(this.elements.input.value) || friend.first_name.includes(this.elements.input.value) || friend.last_name.includes(this.elements.input.value)
     })
     friends.clearList();
-    friends._renderFriends(filteredFriends);
+    pagination.clearPagination();
+    // friends._renderFriends(filteredFriends);
+    friends.renderFriends(filteredFriends);
   }
 
 

@@ -47,7 +47,8 @@ export default class User extends BaseComponent {
     this.elements.address.textContent = `${addressData.country},
                                           ${addressData.city},
                                           ${addressData.street.name},
-                                          ${addressData.street.number}`;
+                                          ${addressData.street.number}`
+                                          ;
   }
 
   _createNumber(data) {
