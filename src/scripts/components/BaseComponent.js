@@ -10,4 +10,20 @@ export default class BaseComponent {
     this._dependencies = dependencies;
   }
 
+  // добавление слушателей
+  _setHandlers(handlersArray) {
+    handlersArray.forEach(handlerUnit => {
+      const { element, event, handler } = handlerUnit;
+      element.addEventListener(event, handler);
+    });
+  }
+
+  // удаление слушателей
+  _removeHandlers(handlersArray) {
+    handlersArray.forEach(handlerUnit => {
+      const { element, event, handler } = handlerUnit;
+      element.removeEventListener(event, handler);
+    });
+  }
+
 }
