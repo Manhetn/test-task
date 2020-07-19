@@ -24,6 +24,9 @@ import TABS_PARAMETERS from '../../scripts/constants/tabs';
 import Filter from '../../scripts/components/Filter';
 import FILTER_PARAMETERS from '../../scripts/constants/filter';
 
+import Pagination from '../../scripts/components/Pagination';
+import PAGINATION_PARAMETERS from '../../scripts/constants/pagination';
+
 import ApiUser from '../../scripts/api/ApiUser';
 import API_USER_PARAMETERS from '../../scripts/constants/api-user';
 
@@ -44,16 +47,18 @@ const posts = new Posts(POSTS_PARAMETERS);
 const post = new Post();
 const tabs = new Tabs(TABS_PARAMETERS);
 const filter = new Filter(FILTER_PARAMETERS);
+const pagination = new Pagination(PAGINATION_PARAMETERS);
 
 const apiUser = new ApiUser(API_USER_PARAMETERS);
 const apiFriends = new ApiFriends(API_FRIENDS_PARAMETERS);
 const apiPosts = new ApiPosts(API_POSTS_PARAMETERS);
 
 user.getDependencies({ apiUser });
-friends.getDependencies({ storage, apiFriends, friend });
+friends.getDependencies({ storage, apiFriends, friend, pagination });
 posts.getDependencies({ storage, apiPosts, post });
 tabs.getDependencies({ friends, posts });
-filter.getDependencies({ storage, friends });
+filter.getDependencies({ storage, friends, pagination });
+pagination.getDependencies({ friends });
 
 user.renderUser();
 avatar.renderAvatar();

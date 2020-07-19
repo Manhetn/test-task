@@ -12,6 +12,7 @@ export default class ApiPosts extends Api {
       headers: this.headers,
     })
     .then(res => this._checkRes(res))
+    .catch(this._showError);
   }
 
 }

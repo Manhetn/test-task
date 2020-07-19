@@ -7,8 +7,14 @@ export default class Tabs extends BaseComponent {
 
   setListeners() {
     this._setHandlers([
-      { element: this.elements.tabFriends, event: 'click', handler: this._openTabFriends.bind(this) },
-      { element: this.elements.tabPost, event: 'click', handler: this._openTabPost.bind(this) },
+      { element: this.elements.tabFriends,
+        event: 'click',
+        handler: this._openTabFriends.bind(this)
+      },
+      { element: this.elements.tabPost,
+        event: 'click',
+        handler: this._openTabPost.bind(this)
+      },
     ]);
   }
 
