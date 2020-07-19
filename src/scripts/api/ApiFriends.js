@@ -1,12 +1,12 @@
 import Api from './Api';
 
-export default class ApiUser extends Api {
+export default class ApiFriends extends Api {
   constructor(parameters){
     super(parameters);
   }
 
-  getUser() {
-    return fetch(`${this.url}${this.roots.getUser}`, {
+  getFriends() {
+    return fetch(`${this.url}${this.roots.getFriends}`, {
       method: 'GET',
       // credentials: 'include',
       headers: this.headers,

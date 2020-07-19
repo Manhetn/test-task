@@ -16,23 +16,44 @@ export default class User extends BaseComponent {
     apiUser
       .getUser()
       .then(res =>{
-        console.log(res);
+        // console.log(res.results[0].name);
+        const userData = res.results[0];
+        this._addUserNames(userData.name);
+        this._addEmail(userData.email);
+        this._addPhoneNumber(userData.phone);
+        this._addAddress(userData.location);
       })
   }
 
+  _addUserNames(userData) {
+    this.elements.firstName.textContent = userData.first;
+    this.elements.middleName.textContent = userData.middle ? userData.middle : '';
+    this.elements.lastName.textContent = userData.last;
+  }
 
+  _addEmail(email) {
+    this.elements.email.textContent = email;
+  }
 
-    // mainApi
-    //   .getUser()
-    //   .then(res => {
-    //     if (res.statusCode === '200') {
-    //       storage.setPropertyValue('userName', res.data.name);
-    //       header._showAuthorizedUserMenu(res.data.name)
-    //     } else {
-    //       throw new Error(res.message);
-    //     }
-    //   }).catch(err => console.log(err))
+  _addPhoneNumber(phone) {
+    // console.log(phone)
+    this.elements.number.textContent = phone;
+    this.elements.number.href=`tel:${phone}`
+    // console.log(this._createNumber(phone));
+  }
 
+  _addAddress(addressData) {
+    // console.log(addressData.country);
+    this.elements.address.textContent = `${addressData.country},
+                                          ${addressData.city},
+                                          ${addressData.street.name},
+                                          ${addressData.street.number}`;
+  }
 
-
+  _createNumber(data) {
+    // console.log(data)
+    const number = data.match(/\d/g);
+    // console.log(number)
+    // return number;
+  }
 }
