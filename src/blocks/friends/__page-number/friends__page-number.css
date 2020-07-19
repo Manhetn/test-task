@@ -1,6 +1,3 @@
-@import url(./_active/friends__page-number_active.css);
-@import url(./_hidden/friends__page-number_hidden.css);
-
 .friends__page-number {
   margin: 0px 2px;
   font-size: 18px;
