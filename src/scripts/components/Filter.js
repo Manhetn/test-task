@@ -32,8 +32,8 @@ export default class Filter extends BaseComponent {
     const filteredFriends = friendsArray.filter(friend => {
        return friend.email.includes(this.elements.input.value) || friend.first_name.includes(this.elements.input.value) || friend.last_name.includes(this.elements.input.value)
     })
-    // this.removeListeners();
-    // pagination.removeListeners();
+    this.removeListeners();
+    pagination.removeListeners();
     friends.clearList();
     pagination.clearPagination();
     friends.renderFriends(filteredFriends);
