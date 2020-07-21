@@ -1,4 +1,4 @@
-const FRIENDS_PARAMETERS ={
+const FRIENDS_PARAMETERS = {
   block: document.querySelector('.friends'),
   elements: {
     friendsList: document.querySelector('.friends__list'),

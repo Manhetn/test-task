@@ -14,29 +14,16 @@ export default class Pagination extends BaseComponent {
               >
                 ${number}
               </button>
-            </li>`
+            </li>`;
   }
 
   addPageNumber(number) {
-    // console.log(number)
-    // if (number > 0) {
-    //   console.log('> 0')
-    // } else {
-    //   console.log('< 0')
-    // }
     this.block.insertAdjacentHTML("beforeend", this._createPageNubmber(number));
   }
 
   setListeners() {
     console.log('setPagination!!!!!!!!!!!!')
     this._setHandlers([
-      { element: this.block, event: 'click', handler: this._openAnotherPage.bind(this) },
-    ]);
-  }
-
-  removeListeners() {
-    console.log('removePagination!!!!!!!')
-    this._removeHandlers([
       { element: this.block, event: 'click', handler: this._openAnotherPage.bind(this) },
     ]);
   }
@@ -55,29 +42,24 @@ export default class Pagination extends BaseComponent {
   }
 
   activatePageNumber(numberPage) {
-
-    console.log(numberPage)
     numberPage.setAttribute('disabled', 'disabled');
     numberPage.classList.add(this.modifiers.numberActive);
   }
 
   deactivatePageNumber(numberPage) {
-    numberPage.removeAttribute('disabled', 'disabled');
+    numberPage.removeAttribute('disabled', 'enable');
     numberPage.classList.remove(this.modifiers.numberActive);
   }
 
   clearPagination() {
     this.block.textContent = '';
-    // this.removeListeners();
   }
 
   activatFirstPageNumber() {
     const firsPageNumber = this.block.firstElementChild.firstElementChild;
-    // console.log(firsPageNumber)
-    // debugger
+
     firsPageNumber.setAttribute('disabled', 'disabled');
     firsPageNumber.classList.add(this.modifiers.numberActive);
   }
 
 }
-

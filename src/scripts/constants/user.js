@@ -1,4 +1,4 @@
-const USER_PARAMETERS ={
+const USER_PARAMETERS = {
   elements: {
     firstName: document.querySelector('.user__first-name'),
     middleName: document.querySelector('.user__middle-name'),

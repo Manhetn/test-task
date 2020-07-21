@@ -37,7 +37,7 @@ import ApiPosts from '../../scripts/api/ApiPosts';
 import API_POSTS_PARAMETERS from '../../scripts/constants/api-posts';
 
 import NotFound from '../../scripts/components/NotFound';
-import MESSAGES_EN from '../../scripts/constants/messages_en';
+import MESSAGES_EN from '../../scripts/constants/messages-en';
 
 const storage = new Storage(sessionStorage);
 const avatar = new Avatar(AVATAR_PARAMETERS);
@@ -53,7 +53,7 @@ const notFound = new NotFound(MESSAGES_EN);
 const apiUser = new ApiUser(API_USER_PARAMETERS);
 const apiFriends = new ApiFriends(API_FRIENDS_PARAMETERS);
 const apiPosts = new ApiPosts(API_POSTS_PARAMETERS);
-console.log('!!!!!!!!!!!!!!!!!!!')
+
 user.getDependencies({ apiUser });
 posts.getDependencies({ storage, apiPosts, post, notFound });
 friends.getDependencies({ storage, apiFriends, friend, pagination, notFound, filter });
@@ -64,10 +64,5 @@ pagination.getDependencies({ friends });
 user.getUser();
 posts.getPosts();
 friends.getFriends();
-
-// filter.setListeners();
 tabs.setListeners();
-
 avatar.setListeners();
-
-

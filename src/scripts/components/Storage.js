@@ -4,15 +4,15 @@ export default class Storage {
   }
 
   getPropertyValue(key) {
-    return this.storage.getItem(key)
+    return this.storage.getItem(key);
   }
 
   setPropertyValue(key, value) {
-    this.storage.setItem(key, value)
+    this.storage.setItem(key, value);
   }
 
   removeProperties(key){
-    this.storage.removeItem(key)
+    this.storage.removeItem(key);
   }
 
 }

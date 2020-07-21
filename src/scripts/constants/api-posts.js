@@ -1,7 +1,7 @@
 const API_POSTS_PARAMETERS = {
   url: `https://jsonplaceholder.typicode.com`,
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   },
   roots: {
     getPosts: `/posts`,

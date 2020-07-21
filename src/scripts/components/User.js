@@ -5,23 +5,19 @@ export default class User extends BaseComponent {
     super(parameters);
   }
 
-  //   getUser() {
-  //   this._getUserData();
-  // }
-
   getUser() {
     const { apiUser } = this._dependencies;
 
     apiUser
       .getUser()
-      .then(res =>{
+      .then(res => {
         const userData = res.results[0];
 
         this._addUserNames(userData.name);
         this._addEmail(userData.email);
         this._addPhoneNumber(userData.phone);
         this._addAddress(userData.location);
-      })
+      });
   }
 
   _addUserNames(userData) {
@@ -36,18 +32,19 @@ export default class User extends BaseComponent {
 
   _addPhoneNumber(phone) {
     this.elements.number.textContent = phone;
-    this.elements.number.href=`tel:${phone}`
+    this.elements.number.href = `tel: +${this._formattingNumber(phone)}`;
   }
 
   _addAddress(addressData) {
-    // console.log(addressData.country);
     this.elements.address.textContent = `${addressData.country},
                                           ${addressData.city},
                                           ${addressData.street.name},
                                           ${addressData.street.number}`;
   }
 
-  _createNumber(data) {
-    const number = data.match(/\d/g);
+  _formattingNumber(data) {
+    let number = data.match(/\d/g);
+    number = number.join('');
+    return number;
   }
 }

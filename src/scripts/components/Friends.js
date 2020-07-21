@@ -24,7 +24,7 @@ export default class Friends extends BaseComponent {
   }
 
   renderFriends(arrayFriends) {
-      const { pagination, notFound, filter } = this._dependencies;
+      const { pagination, notFound } = this._dependencies;
       const numberFriendsOnThePage = this.data.friendsOnThePage;
 
       if(arrayFriends.length !== 0) {
@@ -50,36 +50,31 @@ export default class Friends extends BaseComponent {
     firsPage.classList.remove('friends__page_hidden');
   }
 
-  // получаем номер страницы
   _getPageNumber(number, numberOfFriendsOnThePage) {
     return Math.ceil((number +1) / numberOfFriendsOnThePage)
   }
 
-  // создаем страницу для друзей
   _createPage(number){
-    return `<div class="friends__page friends__page-${number} friends__page_hidden"></div>`;
+    return `<div
+              class="friends__page friends__page-${number} friends__page_hidden"></div>`;
   }
 
-  // перебераем массив с друзьями для добавления
   _addFriends(friendsArray, page) {
     friendsArray.forEach(friendDate => {
         this._addFriend(friendDate, page);
       });
   }
 
-  // добавляем друга
   _addFriend(friendDate, page) {
     const { friend } = this._dependencies;
 
     page.insertAdjacentHTML("beforeend", friend.createFriend(friendDate));
   }
 
-  // отоброжаем страницы в friend list
   _addPages(page){
     this.elements.friendsList.insertAdjacentHTML('beforeend', page);
   }
 
-  // очищаем friend-list
   clearList() {
     this.elements.friendsList.textContent = '';
   }
