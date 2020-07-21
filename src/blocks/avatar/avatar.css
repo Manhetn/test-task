@@ -1,5 +1,11 @@
+@import url(./__image/avatar__image.css);
+@import url(./__input/avatar__input.css);
+@import url(./__edit-bg/avatar__edit-bg.css);
+
+
 .avatar {
-  border-radius: 1000px;
+  position: relative;
+  z-index: 1;
 }
 
 

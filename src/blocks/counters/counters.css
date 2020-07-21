@@ -1,0 +1,25 @@
+@import url(./__iteam/counters__iteam.css);
+@import url(./__link/counters__link.css);
+@import url(./__counter/counters__counter.css);
+@import url(./__text/counters__text.css);
+
+.counters {
+  width: auto;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 19px;
+  padding-bottom: 14px;
+
+  border-top: 1px solid #E5E5E5;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .counters {
+    padding-top: 10px;
+    padding-bottom: 7px;
+  }
+}

@@ -15,11 +15,15 @@ export default class Pagination extends BaseComponent {
                 ${number}
               </button>
             </li>`
-
-    // `<li class="friends__page-number friends__page-number-${number}">${number}</li>`;
   }
 
   addPageNumber(number) {
+    // console.log(number)
+    // if (number > 0) {
+    //   console.log('> 0')
+    // } else {
+    //   console.log('< 0')
+    // }
     this.block.insertAdjacentHTML("beforeend", this._createPageNubmber(number));
   }
 
@@ -29,11 +33,11 @@ export default class Pagination extends BaseComponent {
     ]);
   }
 
-  removeListeners() {
-    this._removeHandlers([
-      { element: this.block, event: 'click', handler: this._openAnotherPage.bind(this) },
-    ]);
-  }
+  // removeListeners() {
+  //   this._removeHandlers([
+  //     { element: this.block, event: 'click', handler: this._openAnotherPage.bind(this) },
+  //   ]);
+  // }
 
   _openAnotherPage(event) {
     if (event.target.classList.contains(this.elements.pageNumber)){

@@ -1,0 +1,22 @@
+.info {
+  width: 810px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+  justify-self: start;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #000000;
+}
+
+@media screen and (max-width: 1439px) {
+  .info {
+    width: calc( (100vw - 768px)/(1439 - 768) * (810 - 462) + 462px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .info {
+    width: 100%;
+    box-shadow: none;
+    /* text-align: center; */
+  }
+}

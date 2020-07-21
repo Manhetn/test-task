@@ -1,6 +1,7 @@
 .friend__avatar {
   width: 125px;
   height: 125px;
+  border-radius: 1000px;
 }
 
 @media screen and (max-width: 1439px) {
@@ -12,9 +13,7 @@
 
 @media screen and (max-width: 767px) {
   .friend__avatar {
-    /* width: 100px; */
     width: calc((100vw - 320px)/(767 - 320) * (100 - 70) + 70px);
-    /* height: 100px; */
     height: calc((100vw - 320px)/(767 - 320) * (100 - 70) + 70px);
   }
 }

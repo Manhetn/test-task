@@ -1,14 +1,12 @@
 const USER_PARAMETERS ={
-  block: document.querySelector('.user-info'),
   elements: {
-    firstName: document.querySelector('.user-info__first-name'),
-    middleName: document.querySelector('.user-info__middle-name'),
-    lastName: document.querySelector('.user-info__last-name'),
-    email: document.querySelector('.user-info__email-address'),
-    number: document.querySelector('.user-info__phone-number'),
-    address: document.querySelector('.user-info__full-address'),
+    firstName: document.querySelector('.user__first-name'),
+    middleName: document.querySelector('.user__middle-name'),
+    lastName: document.querySelector('.user__last-name'),
+    email: document.querySelector('.user__email-address'),
+    number: document.querySelector('.user__phone-number'),
+    address: document.querySelector('.user__full-address'),
   },
 }
 
 export default USER_PARAMETERS;
-

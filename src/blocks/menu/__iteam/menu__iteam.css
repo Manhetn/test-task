@@ -1,0 +1,18 @@
+.menu__iteam {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 160%;
+}
+
+@media screen and (max-width: 1439px) {
+  .menu__iteam {
+    font-size: calc( (100vw - 767px)/(1439 - 767) * (24 - 20) + 20px);
+  }
+}
+/*
+@media screen and (max-width: 767px) {
+  .side-bar__list-iteam {
+    font-size: 24px;
+  }
+} */

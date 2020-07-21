@@ -1,8 +1,7 @@
 const AVATAR_PARAMETERS = {
-  block: document.querySelector('.side-bar'),
   elements: {
-    avatar: document.querySelector('.avatar-user'),
-    inputEditAvatar: document.querySelector('.side-bar__input'),
+    avatar: document.querySelector('.avatar__image'),
+    input: document.querySelector('.avatar__input'),
   },
 }
 

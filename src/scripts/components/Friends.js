@@ -19,28 +19,28 @@ export default class Friends extends BaseComponent {
   }
 
   renderFriends(arrayFriends) {
-
-    const { pagination } = this._dependencies;
-
+    const { pagination, notFound } = this._dependencies;
     const numberFriendsOnThePage = this.data.friendsOnThePage;
 
-    for (let i = 0; i <= arrayFriends.length; i = i + numberFriendsOnThePage) {
+    if (arrayFriends.length !== 0) {
+      for (let i = 0; i <= arrayFriends.length; i = i + numberFriendsOnThePage) {
+        let endNumber = i + +numberFriendsOnThePage;
+        const numberPage = this._getPageNumber(i, numberFriendsOnThePage);
+        const arrayFriendOnPage = arrayFriends.slice(i, endNumber)
 
-      let endNumber = i + +numberFriendsOnThePage;
-      const numberPage = this._getPageNumber(i, numberFriendsOnThePage);
-      const arrayFriendOnPage = arrayFriends.slice(i, endNumber)
+        this._addPages(this._createPage(numberPage));
 
-      this._addPages(this._createPage(numberPage));
+        const page = document.querySelector(`.friends__page-${numberPage}`);
 
-      const page = document.querySelector(`.friends__page-${numberPage}`);
-
-      this._addFriends(arrayFriendOnPage, page)
-      pagination.addPageNumber(numberPage);
-
+        this._addFriends(arrayFriendOnPage, page)
+        pagination.addPageNumber(numberPage);
+      }
+      pagination.activatFirstPageNumber();
+      pagination.setListeners();
+      this._visibleFirstPage();
+    } else {
+      this._addPages(notFound.createNoFriendFound());
     }
-    pagination.activatFirstPageNumber();
-    pagination.setListeners();
-    this._visibleFirstPage();
   }
 
   _visibleFirstPage() {
@@ -75,6 +75,7 @@ export default class Friends extends BaseComponent {
 
   // отоброжаем страницы в friend list
   _addPages(page){
+    console.log(page)
     this.elements.friendsList.insertAdjacentHTML('beforeend', page);
   }
 
@@ -92,18 +93,15 @@ export default class Friends extends BaseComponent {
   }
 
   visiblePage(numberPage) {
-    // console.log(numberPage)
     const page = document.querySelector(`.friends__${numberPage}`);
-    // console.log(page)
+
     page.classList.remove(this.modifiers.pageHidden);
   }
 
   hiddenPage(numberPage) {
-    // console.log(numberPage)
     const page = document.querySelector(`.friends__${numberPage}`);
 
     page.classList.add(this.modifiers.pageHidden);
   }
-
 
 }

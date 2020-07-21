@@ -1,0 +1,6 @@
+@import url(./_disabled/counters__link_disabled.css);
+
+.counters__link {
+  text-decoration: none;
+  color: black;
+}

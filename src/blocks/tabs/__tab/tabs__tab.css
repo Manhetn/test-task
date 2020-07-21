@@ -1,29 +1,6 @@
-@import url(./_active/tabs__tab_active.css);
-
 .tabs__tab {
-  width: 270px;
-  padding-top: 27px;
-  padding-bottom: 10px;
-  text-align: center;
-
   font-size: 16px;
   line-height: 160%;
-
-  cursor: pointer;
 }
 
-@media screen and (max-width: 1439px) {
-  .tabs__tab {
-    width: calc( (100vw - 768px)/(1439 - 768) * (270 - 222) + 222px);
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .tabs__tab {
-    width: 222px;
-    padding-top: 10px;
-    padding-bottom: 7px;
-
-    /* padding-bottom: calc( (100vw - 768px)/(1440 - 768) * (76 - 48) + 48px); */
-  }
-}

@@ -10,7 +10,6 @@ export default class User extends BaseComponent {
   }
 
   _getUserData() {
-
     const { apiUser } = this._dependencies;
 
     apiUser
@@ -36,10 +35,8 @@ export default class User extends BaseComponent {
   }
 
   _addPhoneNumber(phone) {
-    // console.log(phone)
     this.elements.number.textContent = phone;
     this.elements.number.href=`tel:${phone}`
-    // console.log(this._createNumber(phone));
   }
 
   _addAddress(addressData) {
@@ -47,14 +44,10 @@ export default class User extends BaseComponent {
     this.elements.address.textContent = `${addressData.country},
                                           ${addressData.city},
                                           ${addressData.street.name},
-                                          ${addressData.street.number}`
-                                          ;
+                                          ${addressData.street.number}`;
   }
 
   _createNumber(data) {
-    // console.log(data)
     const number = data.match(/\d/g);
-    // console.log(number)
-    // return number;
   }
 }

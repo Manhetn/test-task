@@ -1,0 +1,7 @@
+@import url(./__text/not-found__text.css);
+
+.not-found {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

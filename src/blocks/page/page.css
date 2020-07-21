@@ -2,9 +2,7 @@
   max-width: 1440px;
   padding-top: 15px;
   margin: 0px auto;
-
   background: #F1F1F1;
-
   display: grid;
   grid-template-columns: 1fr 1.85fr;
   grid-column-gap: 30px;
@@ -13,7 +11,6 @@
 
 @media screen and (max-width: 1439px) {
   .page {
-    /* grid-template-columns: 1fr 1.89fr; */
     grid-template-columns: 1fr calc( (100vw - 768px)/(1439 - 768) * (1.85 - 1.89) + 1.89fr);
     grid-column-gap: calc( (100vw - 768px)/(1439 - 768) * (30 - 15) + 15px);
     grid-row-gap: calc( (100vw - 768px)/(1439 - 768) * (30 - 15) + 15px);
@@ -22,6 +19,7 @@
 
 @media screen and (max-width: 767px) {
   .page {
+    padding-top: 0px;
     display: block;
   }
 }

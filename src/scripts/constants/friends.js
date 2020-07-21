@@ -8,7 +8,6 @@ const FRIENDS_PARAMETERS ={
   modifiers: {
     blockHidden: 'friends_hidden',
     active: 'friends__page-number_active',
-    // numberHidden: 'friends__page-number_hidden',
     pageHidden: 'friends__page_hidden',
   },
   data: {
