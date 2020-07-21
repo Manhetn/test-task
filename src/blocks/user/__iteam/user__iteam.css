@@ -1,0 +1,25 @@
+.user__iteam {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 1px;
+  font-size: 36px;
+  line-height: 160%;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.user__iteam:last-child {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1439px) {
+  .user__iteam {
+    font-size: calc( (100vw - 768px)/(1439 - 768) * (36 - 20) + 20px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .user__iteam {
+    font-size: calc((100vw - 320px)/(767 - 320) * (20 - 16) + 16px);
+  }
+}

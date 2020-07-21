@@ -1,0 +1,21 @@
+@import url(./__list/menu__list.css);
+@import url(./__iteam/menu__iteam.css);
+@import url(./__link/menu__link.css);
+
+.menu {
+  padding: 0px;
+  margin-top: 41px;
+  padding-bottom: 14px;
+}
+
+@media screen and (max-width: 1439px) {
+  .menu {
+    margin-top: calc( (100vw - 767px)/(1439 - 768) * (41 - 15) + 15px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    padding-bottom: 0px;
+  }
+}

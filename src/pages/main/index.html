@@ -8,46 +8,33 @@
     <title>TestTask</title>
   </head>
   <body class="page">
-
+    <!-- side-bar -->
     <section class="side-bar">
-      <div class="side-bar__avatar-container">
+      <!-- avatar -->
+      <div class="avatar">
         <img
-        class="side-bar__avatar avatar avatar-user"
+        class="avatar__image"
         src="<%=require('../../images/avatar.jpg')%>"
         alt="User photo"
         />
-        <input class="side-bar__input" name="editAvatar" type="file">
-        <div class="side-bar__edit-bg">
+        <input class="avatar__input"
+          name="editAvatar"
+          type="file"
+          accept=".png, .jpg, .jpeg"
+        >
+        <div class="avatar__edit-bg">
           <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M33.4931 8.33328L13.9005 27.9258L20.8242 34.8495L40.4168 15.257L33.4931 8.33328Z" fill="white"/>
             <path d="M10.4166 38.5095L12.2916 29.7595L18.9583 36.6345L10.4166 38.5095Z" fill="white"/>
           </svg>
         </div>
       </div>
-      <button
-          class="button side-bar__open-menu"
-          type="button"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="8" width="16" height="2" fill="#1A1B22"/>
-            <rect x="4" y="14" width="16" height="2" fill="#1A1B22"/>
-          </svg>
-        </button>
-        <!-- side-bar__menu_visible -->
-      <nav class="side-bar__menu ">
-        <button
-          class="button side-bar__close-menu"
-          type="button"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.4142 12L18.7071 17.2928L17.2929 18.7071L11.2929 12.7071C10.9024 12.3165 10.9024 11.6834 11.2929 11.2928L17.2929 5.29285L18.7071 6.70706L13.4142 12Z" fill="white"/>
-            <path d="M10.8787 12L5.58577 17.2928L6.99999 18.7071L13 12.7071C13.3905 12.3165 13.3905 11.6834 13 11.2928L6.99999 5.29285L5.58577 6.70706L10.8787 12Z" fill="white"/>
-          </svg>
-        </button>
-        <ul class="side-bar__list">
-          <li class="side-bar__list-iteam">
+      <!-- menu -->
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__iteam">
             <a
-              class="side-bar__link"
+              class="menu__link"
               href="#"
               lang="en"
               title="Link to user account"
@@ -55,9 +42,9 @@
             My Account
             </a>
           </li>
-          <li class="side-bar__list-iteam">
+          <li class="menu__iteam">
             <a
-              class="side-bar__link"
+              class="menu__link"
               href="#"
               lang="en"
               title="Link to user messages"
@@ -65,9 +52,9 @@
             Messages
             </a>
           </li>
-          <li class="side-bar__list-iteam">
+          <li class="menu__iteam">
             <a
-              class="side-bar__link"
+              class="menu__link"
               href="#"
               lang="en"
               title="Link to user news"
@@ -75,9 +62,9 @@
             News
             </a>
           </li>
-          <li class="side-bar__list-iteam">
+          <li class="menu__iteam">
             <a
-              class="side-bar__link"
+              class="menu__link"
               href="#"
               lang="en"
               title="Link to user photos"
@@ -85,9 +72,9 @@
             Photos
             </a>
           </li>
-          <li class="side-bar__list-iteam">
+          <li class="menu__iteam">
             <a
-              class="side-bar__link"
+              class="menu__link"
               href="#"
               lang="en"
               title="Link to user video"
@@ -95,9 +82,9 @@
             Video
             </a>
           </li>
-          <li class="side-bar__list-iteam">
+          <li class="menu__iteam">
             <a
-              class="side-bar__link"
+              class="menu__link"
               href="#"
               lang="en"
               title="Link to user bookmarks"
@@ -108,17 +95,18 @@
         </ul>
       </nav>
     </section>
-
-    <section class="user-info">
-      <div class="user-info__data-container">
-        <h1 class="user-info__data-iteam">
-          <span class="user-info__first-name">First_name</span>
-          <span class="user-info__middle-name">Middle_name</span>
-          <span class="user-info__last-name">Last_name</span>
+    <!-- info -->
+    <section class="info">
+      <!-- user -->
+      <div class="user">
+        <h1 class="user__iteam">
+          <span class="user__first-name">First_name</span>
+          <span class="user__middle-name">Middle_name</span>
+          <span class="user__last-name">Last_name</span>
         </h1>
-        <p class="user-info__data-iteam">email:
+        <p class="user__iteam">email:
           <a
-            class="user-info__contact-info user-info__email-address"
+            class="user__contact-info user__email-address"
             href="mailto:username@domain.net"
             lang="en"
             title="user email"
@@ -126,9 +114,9 @@
             username@domain.net
           </a>
         </p>
-        <p class="user-info__data-iteam">phone:
+        <p class="user__iteam">phone:
           <a
-            class="user-info__contact-info user-info__phone-number"
+            class="user__contact-info user__phone-number"
             href="tel:+01234567890"
             lang="en"
             title="user phone"
@@ -136,58 +124,75 @@
             +0 (123) 456-78-90
           </a>
         </p>
-        <address class="user-info__data-iteam user-info__full-address">full address</address>
+        <address class="user__iteam user__full-address">
+          full address
+        </address>
       </div>
-
-      <ul class="user-info__counter-container">
-        <li class="user-info__counter-iteam">
+      <!-- counters -->
+      <ul class="counters">
+        <li class="counters__iteam">
           <a
-            class="user-info__counter-link user-info__link-messages"
+            class="counters__link counters__link-messages"
             href="#"
             lang="en"
             title="New messages"
           >
-            <span class="user-info__counter user-info__counter-messages">11</span>
-            <p class="user-info__counter-text">New messages</p>
+            <span class="counters__counter counters__counter-messages">11</span>
+            <p class="counters__text">New messages</p>
           </a>
         </li>
-        <li class="user-info__counter-iteam">
+        <li class="counters__iteam">
           <a
-            class="user-info__counter-link user-info__link-requests user-info__counter-link_zero"
+            class="counters__link counters__link-requests counters__link_disabled"
             href="#"
             lang="en"
             title="New requests"
           >
-            <span class="user-info__counter user-info__counter-requests">0</span>
-            <p class="user-info__counter-text">New requests</p>
+            <span class="counters__counter counters__counter-requests">0</span>
+            <p class="counters__text">New requests</p>
           </a>
         </li>
-        <li class="user-info__counter-iteam">
+        <li class="counters__iteam">
           <a
-            class="user-info__counter-link user-info__link-photos"
+            class="counters__link counters__link-photos"
             href="#"
             lang="en"
             title="New photos"
           >
-            <span class="user-info__counter user-info__counter-photos">7</span>
-            <p class="user-info__counter-text">New photos</p>
+            <span class="counters__counter counters__counter-photos">7</span>
+            <p class="counters__text">New photos</p>
           </a>
         </li>
       </ul>
     </section>
-
+    <!-- content -->
     <main class="content">
-
+      <!-- tabs -->
       <section class="tabs">
         <ul class="tabs__container">
-          <li class="tabs__tab tabs__tab-friends tabs__tab_active">Friends</li>
-          <li class="tabs__tab tabs__tab-post">Posts</li>
+          <li class="tabs__tab">
+            <button
+                class="tabs__button button tabs__button-friends"
+                type="button"
+                name="tab-friends"
+                disabled
+              >
+                Friends
+              </button>
+          </li>
+          <li class="tabs__tab tabs__tab-post">
+            <button
+                class="tabs__button button tabs__button-post"
+                type="button"
+                name="tab-post"
+              >
+                Posts
+              </button>
+          </li>
         </ul>
       </section>
-
       <!-- friends_hidden -->
       <section class="friends">
-
         <form
         class="friends__form filter"
         name="filter"
@@ -201,18 +206,13 @@
             maxlength= "30"
           />
         </form>
-
-
         <div class="friends__list">
-          <!-- <div class="friends__page">
-
-          </div> -->
 
           <!-- Закоменчино для тестирования верстки -->
 
           <!-- <div class="friend">
             <img
-              class="friend__avatar avatar"
+              class="friend__avatar"
               src="<%=require('../../images/friend.jpg')%>"
               alt="friend photo"
             />
@@ -233,7 +233,7 @@
           </div>
           <div class="friend">
             <img
-              class="friend__avatar avatar"
+              class="friend__avatar"
               src="<%=require('../../images/friend.jpg')%>"
               alt="friend photo"
             />
@@ -254,7 +254,7 @@
           </div>
           <div class="friend">
             <img
-              class="friend__avatar avatar"
+              class="friend__avatar"
               src="<%=require('../../images/friend.jpg')%>"
               alt="friend photo"
             />
@@ -274,9 +274,8 @@
             </div> -->
           </div>
 
-          <!-- friends__page-numbers_hidden -->
-
         </div>
+        <!-- friends__page-numbers_hidden -->
         <ul class="friends__page-numbers">
           <!-- <li class="friends__page-number">
             <button class="friends__button button" type="button" disabled>

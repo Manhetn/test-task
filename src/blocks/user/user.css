@@ -1,0 +1,17 @@
+@import url(./__iteam/user__iteam.css);
+@import url(./__contact-info/user__contact-info.css);
+
+.user {
+  width: auto;
+  padding: 31px 45px 0px 45px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .user {
+    padding-top: calc((100vw - 320px)/(767 - 320) * (5 - 0) + 0px);
+    padding-right: calc((100vw - 320px)/(767 - 320) * (45 - 0) + 0px);
+    padding-left: calc((100vw - 320px)/(767 - 320) * (45 - 0) + 0px);
+    margin-left: calc((100vw - 320px)/(767 - 320) * (150 - 25) + 25px);
+  }
+}

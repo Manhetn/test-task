@@ -1,0 +1,5 @@
+.counters__link.counters__link_disabled {
+  color: #C4C4C4;
+  cursor: default;
+  pointer-events: none;
+}

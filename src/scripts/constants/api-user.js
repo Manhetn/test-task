@@ -9,9 +9,3 @@ const API_USER_PARAMETERS = {
 };
 
 export default API_USER_PARAMETERS;
-
-
-// • информация о пользователе: https://randomuser.me/api/
-// • список друзей: https://reqres.in/api/users?page=1
-// • записи: https://jsonplaceholder.typicode.com/posts
-

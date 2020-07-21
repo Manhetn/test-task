@@ -1,9 +1,9 @@
 @import url(./__container/tabs__container.css);
 @import url(./__tab/tabs__tab.css);
+@import url(./__button/tabs__button.css);
 
 .tabs {
   border-bottom: 1px solid #E5E5E5;
-
   font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;

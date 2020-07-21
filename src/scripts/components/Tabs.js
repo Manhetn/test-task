@@ -21,8 +21,8 @@ export default class Tabs extends BaseComponent {
   _openTabFriends() {
     const { friends, posts } = this._dependencies;
 
-    this.elements.tabFriends.classList.add(this.modifiers.tabActive);
-    this.elements.tabPost.classList.remove(this.modifiers.tabActive);
+    this.elements.tabFriends.setAttribute('disabled', 'disabled');
+    this.elements.tabPost.removeAttribute('disabled', 'enable');
     friends.visible();
     posts.hidden();
   }
@@ -30,8 +30,8 @@ export default class Tabs extends BaseComponent {
   _openTabPost() {
     const { friends, posts } = this._dependencies;
 
-    this.elements.tabPost.classList.add(this.modifiers.tabActive);
-    this.elements.tabFriends.classList.remove(this.modifiers.tabActive);
+    this.elements.tabPost.setAttribute('disabled', 'disabled');
+    this.elements.tabFriends.removeAttribute('disabled', 'enable');
     friends.hidden();
     posts.visible();
   }

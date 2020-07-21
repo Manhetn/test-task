@@ -1,0 +1,25 @@
+.tabs__button {
+  width: 270px;
+  padding-top: 31px;
+  padding-bottom: 13px;
+}
+
+.tabs__button:disabled {
+  border-bottom: 3px solid #F1F1F1;
+  color: black;
+}
+
+@media screen and (max-width: 1439px) {
+  .tabs__button {
+    width: calc( (100vw - 768px)/(1439 - 768) * (270 - 222) + 222px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tabs__button {
+    width: 135px;
+    width: calc( (100vw - 320px)/(767 - 320) * (220 - 135) + 135px);
+    padding-top: 10px;
+    padding-bottom: 7px;
+  }
+}
