@@ -1,4 +1,4 @@
-@import url(../../vendor/normolize.css);
+@import url(../../vendor/normalize.css);
 @import url(../../vendor/fonts.css);
 
 @import url(../../blocks/page/page.css);
@@ -14,9 +14,6 @@
 @import url(../../blocks/counters/counters.css);
 
 
-
-
-/* @import url(../../blocks/user-info/user-info.css); */
 @import url(../../blocks/content/content.css);
 @import url(../../blocks/tabs/tabs.css);
 @import url(../../blocks/friends/friends.css);

@@ -5,12 +5,10 @@ export default class BaseComponent {
     this.modifiers = parameters.modifiers;
   }
 
-  // получение данных извне
   getDependencies(dependencies) {
     this._dependencies = dependencies;
   }
 
-  // добавление слушателей
   _setHandlers(handlersArray) {
     handlersArray.forEach(handlerUnit => {
       const { element, event, handler } = handlerUnit;
@@ -18,7 +16,6 @@ export default class BaseComponent {
     });
   }
 
-  // удаление слушателей
   _removeHandlers(handlersArray) {
     handlersArray.forEach(handlerUnit => {
       const { element, event, handler } = handlerUnit;

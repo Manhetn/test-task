@@ -12,8 +12,12 @@ export default class Posts extends BaseComponent {
       .getPosts()
       .then(res => {
         storage.setPropertyValue('posts', JSON.stringify(res));
+        if (res.length !== 0 ) {
+          this._renderPosts();
+        } else {
+          this._showNotFound();
+        }
         this._renderPosts();
-        // console.log(res);
       })
   }
 
@@ -24,6 +28,12 @@ export default class Posts extends BaseComponent {
     postsArray.forEach(post => {
       this._addPost(post);
     })
+  }
+
+  _showNotFound() {
+    const { notFound } = this._dependencies;
+
+    this.block.insertAdjacentHTML('afterbegin', notFound.createNoArticlesFound());
   }
 
   _addPost(data) {

@@ -11,7 +11,7 @@ export default class NotFound {
 
   createNoArticlesFound() {
     return `<div class="not-found">
-              <p class="not-found__text">${this.text.noArticlesFound}</p>
+              <p class="not-found__text">${this.messages.notFound.noArticlesFound}</p>
             </div>`;
   }
 

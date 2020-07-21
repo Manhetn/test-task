@@ -5,7 +5,6 @@ export default class Api {
     this.roots = parameters.roots;
   }
 
-  // проверка статуса ответа
   _checkRes(res) {
     if (res.ok) {
       return res.json();
@@ -14,7 +13,6 @@ export default class Api {
     }
   }
 
-  // выводим ошибку в консоль
   _showError(err){
     console.log(`Ошибка: ${err}`);
   }

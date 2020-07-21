@@ -7,8 +7,6 @@ const PAGINATION_PARAMETERS = {
   modifiers: {
     numberActive: 'friends__page-number_active',
     numberHidden: 'friends__page-number_hidden',
-
-
   },
 }
 

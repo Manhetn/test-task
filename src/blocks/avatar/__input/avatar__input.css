@@ -5,6 +5,7 @@
   margin-left: 45px;
   border-radius: 1000px;
   outline: none;
+  cursor: pointer;
   opacity: 0;
   position: absolute;
   top: 0px;
