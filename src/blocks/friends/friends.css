@@ -2,9 +2,11 @@
 @import url(./__input/friends__input.css);
 @import url(./__page-numbers/friends__page-numbers.css);
 @import url(./__page-number/friends__page-number.css);
-@import url(./_hidden/friends_hidden.css);
+
 @import url(./__button/friends__button.css);
 @import url(./__page/friends__page.css);
+
+@import url(./_hidden/friends_hidden.css);
 
 .friends {
   padding-top: 14px;
