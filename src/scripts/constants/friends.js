@@ -11,7 +11,7 @@ const FRIENDS_PARAMETERS ={
     pageHidden: 'friends__page_hidden',
   },
   data: {
-    friendsOnThePage: '3',
+    friendsOnThePage: 3,
   },
 }
 

@@ -5,7 +5,7 @@ export default class Posts extends BaseComponent {
     super(parameters);
   }
 
-  _getPosts() {
+  getPosts() {
     const { apiPosts, storage } = this._dependencies;
 
     apiPosts

@@ -5,18 +5,18 @@ export default class User extends BaseComponent {
     super(parameters);
   }
 
-  renderUser() {
-    this._getUserData();
-  }
+  //   getUser() {
+  //   this._getUserData();
+  // }
 
-  _getUserData() {
+  getUser() {
     const { apiUser } = this._dependencies;
 
     apiUser
       .getUser()
       .then(res =>{
-        // console.log(res.results[0].name);
         const userData = res.results[0];
+
         this._addUserNames(userData.name);
         this._addEmail(userData.email);
         this._addPhoneNumber(userData.phone);

@@ -50,21 +50,24 @@ const post = new Post();
 const tabs = new Tabs(TABS_PARAMETERS);
 const filter = new Filter(FILTER_PARAMETERS);
 const notFound = new NotFound(MESSAGES_EN);
-
 const apiUser = new ApiUser(API_USER_PARAMETERS);
 const apiFriends = new ApiFriends(API_FRIENDS_PARAMETERS);
 const apiPosts = new ApiPosts(API_POSTS_PARAMETERS);
-
+console.log('!!!!!!!!!!!!!!!!!!!')
 user.getDependencies({ apiUser });
-friends.getDependencies({ storage, apiFriends, friend, pagination, notFound });
-pagination.getDependencies({ friends });
 posts.getDependencies({ storage, apiPosts, post, notFound });
-tabs.getDependencies({ friends, posts });
+friends.getDependencies({ storage, apiFriends, friend, pagination, notFound, filter });
 filter.getDependencies({ storage, friends, pagination });
+tabs.getDependencies({ friends, posts, filter, pagination });
+pagination.getDependencies({ friends });
+
+user.getUser();
+posts.getPosts();
+friends.getFriends();
+
+// filter.setListeners();
+tabs.setListeners();
 
 avatar.setListeners();
-user.renderUser();
-friends._getFriends();
-posts._getPosts();
-tabs.setListeners();
-filter.setListeners();
+
+
