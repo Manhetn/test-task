@@ -4,7 +4,7 @@
   height: 70vh;
   margin-left: 45px;
   margin-right: 28px;
-  padding-bottom: 34px;
+  margin-bottom: 34px;
   padding-right: 47px;
   overflow: auto;
   box-sizing: border-box;
@@ -12,17 +12,23 @@
 
 @media screen and (max-height: 1080px) {
   .posts {
-    height: 55vh;
+    height: 54vh;
+  }
+}
+
+@media screen and (max-height: 1024px) {
+  .posts {
+    height: 63vh;
   }
 }
 
 @media screen and (max-height: 900px) {
   .posts {
-    height: 48vh;
+    height: 44.25vh;
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   .posts {
     padding-right: calc((100vw - 320px)/(767 - 320) * (47 - 17) + 17px);
   }
