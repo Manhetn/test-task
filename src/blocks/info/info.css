@@ -3,8 +3,6 @@
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
   background-color: #FFFFFF;
   justify-self: start;
-  font-family: 'Roboto', Arial, sans-serif;
-  color: #000000;
 }
 
 @media screen and (max-width: 1439px) {
