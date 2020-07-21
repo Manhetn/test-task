@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 1439px) {
   .page {
-    grid-template-columns: calc( (100vw - 768px)/(1439 - 768) * (34.36 - 34.36) + 34%) calc( (100vw - 768px)/(1439 - 768) * (65.54 - 65.54) + 66%);
+    grid-template-columns: calc( (100vw - 768px)/(1439 - 768) * (34.36 - 34) + 34%) calc( (100vw - 768px)/(1439 - 768) * (65.54 - 66) + 66%);
     grid-column-gap: calc( (100vw - 768px)/(1439 - 768) * (30 - 15) + 15px);
     grid-row-gap: calc( (100vw - 768px)/(1439 - 768) * (30 - 15) + 15px);
   }
