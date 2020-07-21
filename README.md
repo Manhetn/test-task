@@ -62,7 +62,7 @@ npm run deploy
       document.querySelector('.friends').classList.add('friends_hidden');
       document.querySelector('.posts').classList.remove('posts_hidden');
       ```
-  - Для тестирования JS перейдите в ветку develop
+  - Для тестирования JS перейдите в ветку master
 
 ## Комментарии:
   Для обработки и преобразования номера телефона в соответсвии с локализацией пользователя, в реальном проекти, скорей всего использовал бы libphonenumber-js. Но так как данные номера телефона с сервера, это рандомное чилса решил просто выводить их на старницу в неизмененном виде.
