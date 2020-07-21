@@ -22,7 +22,6 @@ export default class Pagination extends BaseComponent {
   }
 
   setListeners() {
-    console.log('setPagination!!!!!!!!!!!!')
     this._setHandlers([
       { element: this.block, event: 'click', handler: this._openAnotherPage.bind(this) },
     ]);
