@@ -28,6 +28,7 @@ export default class User extends BaseComponent {
 
   _addEmail(email) {
     this.elements.email.textContent = email;
+    this.elements.email.href=`mailto:${email}`;
   }
 
   _addPhoneNumber(phone) {
